@@ -1,0 +1,16 @@
+@import 'normalize.css';
+@import 'primeflex/themes/primeone-light.scss';
+@import 'primeflex/primeflex.scss';
+
+.helper, .helper * {
+  outline: solid 1px #363636;
+}
+
+.helper_target{
+  outline: solid 3px #2abd75;
+}
+
+// Убираем обводку на фокус
+:focus-visible{
+  outline: none;
+}

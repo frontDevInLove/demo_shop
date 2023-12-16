@@ -1,0 +1,36 @@
+.Layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Задаем ряды с автоматической высотой, заполняемой оставшимся пространством и автоматической высотой соответственно */
+  grid-template-columns: 1fr; /* Задаем одну колонку, занимающую всю ширину */
+  min-height: 100vh; /* Устанавливаем высоту блока Layout на высоту всего экрана */
+  grid-template-areas:
+    "header"
+    "content"
+    "footer"; /* Задаем области для блоков с их названиями */
+}
+
+.Header {
+  grid-area: header; /* Задаем имя области блока Header */
+  position: sticky; /* Добавляем position: fixed для закрепления хедера на экране */
+  top: 0px;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid rgba(204,214,228,.6);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Устанавливаем z-index, чтобы хедер был поверх других элементов */
+}
+
+
+.Content {
+  grid-area: content; /* Задаем имя области блока Content */
+}
+
+.Wrapper{
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.Footer {
+  grid-area: footer; /* Задаем имя области блока Footer */
+}

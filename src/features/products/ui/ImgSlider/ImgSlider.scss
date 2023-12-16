@@ -1,0 +1,17 @@
+.CarouselDots{
+  bottom: -10px !important;
+
+  button{
+    background-color: #1d243c !important;
+  }
+}
+
+.Carousel{
+  width: 250px;
+  margin: 10px auto;
+
+  &_img{
+    margin: auto;
+    text-align: center;
+  }
+}
