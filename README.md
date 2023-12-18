@@ -1,30 +1,49 @@
-# React + TypeScript + Vite
+# Демо Магазин
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Описание
 
-Currently, two official plugins are available:
+Демонстрационный интернет-магазин, созданный с использованием ReactJS. Включает в себя список товаров, детальную страницу товара и корзину. Проект доступен на [GitHub Pages](https://frontdevinlove.github.io/demo_shop/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Особенности
 
-## Expanding the ESLint configuration
+- **Список товаров**: Показ товаров с изображениями. Переход на детальную страницу по клику.
+- **Детальная страница**: Информация о товаре, выбор цвета, просмотр изображений, выбор размера.
+- **Корзина**: Добавление товаров с выбором цвета и размера. Уникальные товары с количеством. Возможность удаления товаров.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Технологии
 
-- Configure the top-level `parserOptions` property like this:
+1. React (ReactJS)
+2. TypeScript
+3. Vite
+4. Ant Design (antd)
+5. MobX и mobx-react-lite
+6. React Query
+7. React Router Dom
+8. PrimeFlex
+9. Normalize.css
+10. ESLint, Prettier, Sass, GitHub Pages и др.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Установка и Запуск
+
+```bash
+git clone git@github.com:frontDevInLove/demo_shop.git
+npm install
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Вот обновленный раздел о деплое в вашем README:
+
+---
+
+## Деплой
+
+Для развертывания проекта на GitHub Pages используйте следующую команду:
+
+```bash
+npm run deploy
+```
+
+Эта команда включает в себя:
+1. Сборку проекта с помощью Vite (`vite build`).
+2. Копирование `index.html` в `404.html` для корректной маршрутизации на GitHub Pages (`node copy404.js`).
+3. Публикацию собранного проекта в ветке GitHub Pages (`gh-pages -d dist`).
