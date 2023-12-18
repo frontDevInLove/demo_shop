@@ -9,7 +9,7 @@ const Footer: FC<Props> = () => {
   return (
     <Row className="Wrapper py-3 text-right">
       <Col span={20} offset={2}>
-        <div>Made with love ©{currentYear}</div>
+        <div>Made with frontDevInLove ©{currentYear}</div>
       </Col>
     </Row>
   );
