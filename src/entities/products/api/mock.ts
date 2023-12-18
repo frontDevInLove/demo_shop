@@ -1,6 +1,6 @@
 import { Product, Size } from "@/entities/products/models";
 
-export const products: Product[] = [
+const ClearProducts: Product[] = [
   {
     id: 1,
     name: "Футболка",
@@ -63,6 +63,29 @@ export const products: Product[] = [
     ],
   },
 ];
+
+const decorateProductImagesForGitHubPages = (
+  products: Product[],
+  baseRoute: string,
+): Product[] => {
+  if (baseRoute === "/") {
+    return products; // Если baseRoute равен '/', возвращаем исходный массив
+  }
+
+  return products.map((product) => ({
+    ...product,
+    colors: product.colors.map((color) => ({
+      ...color,
+      images: color.images.map((image) => baseRoute + image),
+    })),
+  }));
+};
+
+const baseRoute = import.meta.env.VITE_APP_ROUTE || "/";
+export const products = decorateProductImagesForGitHubPages(
+  ClearProducts,
+  baseRoute,
+);
 
 export const sizes: Size[] = [
   { id: 1, label: "XS", number: 44 },
